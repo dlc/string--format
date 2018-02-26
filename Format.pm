@@ -72,7 +72,7 @@ my $regex = qr/
                 (-)?          # left-align, rather than right
                 (\d*)?        # (optional) minimum field width
                 (?:\.(\d*))?  # (optional) maximum field width
-                ({.*?})?      # (optional) stuff inside
+                (\{.*?\})?    # (optional) stuff inside
                 (\S)          # actual format character
              )/x;
 sub stringf {
