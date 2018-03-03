@@ -21,6 +21,7 @@ install:
   - if not %perl%==cygwinperl perl -v
   - if     %perl%==cygwinperl c:\cygwin\bin\sh -c "/usr/bin/perl -v"
   - cd %APPVEYOR_BUILD_FOLDER%
+  - if %perl%==activeperl       ppm install dmake
 
 build_script:
   - if     %perl%==cygwinperl   c:\cygwin\bin\sh -c "PATH=/usr/bin:/bin; perl Makefile.PL && $make test"
