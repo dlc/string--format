@@ -6,3 +6,6 @@
 ^blib/
 \.git
 \.travis\.yml
+appveyor\.yml
+MYMETA\.yml
+MYMETA\.json
