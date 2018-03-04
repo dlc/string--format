@@ -23,7 +23,7 @@ use vars qw($VERSION @EXPORT);
 use Exporter;
 use base qw(Exporter);
 
-$VERSION = '1.17_50';
+$VERSION = '1.18';
 @EXPORT = qw(stringf);
 
 sub _replace {
