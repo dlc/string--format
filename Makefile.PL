@@ -20,6 +20,7 @@ EOF
 WriteMakefile(
     'NAME'          => 'String::Format',
     'VERSION_FROM'  => 'Format.pm',
+    'LICENSE'       => 'gpl_2',
     'clean'         => \%clean,
     'PREREQ_PM'     => {
         'Test::More' => 0.00,
