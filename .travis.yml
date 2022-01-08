@@ -1,20 +1,22 @@
 language: perl
-perl:
-  - "5.26"
-  - "5.24"
-  - "5.22"
-  - "5.20"
-  - "5.18"
-  - "5.16"
-  - "5.14"
-  - "5.12"
-  - "5.10"
-  - "5.8"
+arch:
+ - arm64
+matrix:
+ include:
+  - dist: xenial
+    perl: 5.24
+  - dist: bionic
+    perl: 5.26
+  - dist: focal
+    perl: 5.32
+  - dist: focal
+    language: minimal
 
 branches:
   except:
     - /appveyor/
-sudo: false
+    - /github-actions/
+    - /doozer/
 
 script:
   - perl Makefile.PL && env HARNESS_TIMER=1 HARNESS_OPTIONS=j4:c make disttest
